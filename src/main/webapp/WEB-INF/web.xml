@@ -1,0 +1,42 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+	
+<web-app>
+  <display-name>Ad Web Application</display-name>
+  
+<filter>
+	<filter-name>UrlRewriteFilter</filter-name>
+	<filter-class>org.tuckey.web.filters.urlrewrite.UrlRewriteFilter</filter-class>
+	<init-param>
+		<param-name>logLevel</param-name>
+		<param-value>DEBUG</param-value>
+	</init-param>
+	<init-param>
+		<param-name>statusEnabled</param-name>
+		<param-value>false</param-value>
+	</init-param>
+	
+</filter>
+<filter-mapping>
+	<filter-name>UrlRewriteFilter</filter-name>
+	<url-pattern>/*</url-pattern>
+	<dispatcher>REQUEST</dispatcher>
+	<dispatcher>FORWARD</dispatcher>
+</filter-mapping>
+
+  <servlet>
+  	<servlet-name>AdServlet</servlet-name>
+  	<description>JSON Ad Servlet</description>
+  	<servlet-class>org.tomasette.servlet.AdServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AdServlet</servlet-name>
+  	<url-pattern>/</url-pattern>
+  </servlet-mapping>
+
+
+
+
+</web-app>

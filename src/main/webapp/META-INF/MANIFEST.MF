@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Class-Path: commons-lang-2.5.jar gson-1.4.jar log4j-1.2.12.jar urlrewr
+ itefilter-3.1.0.jar
+
