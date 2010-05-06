@@ -15,7 +15,8 @@
       <version>4.0</version>
       <scope>test</scope>
     </dependency>
-		
+	
+	<!-- mock runner -->	
 	<dependency>
    <groupId>com.mockrunner</groupId>
    <artifactId>mockrunner-jdk1.6-j2ee1.3</artifactId>
